@@ -90,6 +90,7 @@ namespace Proggram {
             Console.WriteLine($"1 - Bread: Price - {bread.Price}, in avaible - {bread.Id}");
             Console.WriteLine($"2 - Milk: Price - {milk.Price}, in avaible - {milk.Id}");
             Console.WriteLine($"3 - Eggs: Price - {eggs.Price}, in avaible - {eggs.Id}");
+            Console.WriteLine($"4 - Add new quantity to existent ");
 
             Console.WriteLine("Your choise: ");
 
@@ -242,6 +243,30 @@ namespace Proggram {
                             goto case (3);
                         }
                         break;
+                    case 4:
+                        Console.WriteLine("What type of products you choose? ");
+                        Console.WriteLine($"Bread - 1 (Now {bread.Id}), Milk - 2 (Now {milk.Id}), Eggs - 3 (Now {bread.Id})");
+                        int g = int.Parse(Console.ReadLine());
+                        switch (g)
+                        {
+                            case 1:
+                                Console.WriteLine("Enter quantity: ");
+                                int quanbr = int.Parse(Console.ReadLine());
+                                bread.Id = quanbr;
+                                break;
+                            case 2:
+                                Console.WriteLine("Enter quantity: ");
+                                int quanmilk = int.Parse(Console.ReadLine());
+                                milk.Id = quanmilk;
+                                break;
+                            case 3:
+                                Console.WriteLine("Enter quantity: ");
+                                int quaneggs = int.Parse(Console.ReadLine());
+                                eggs.Id = quaneggs;
+                                break;
+                        }
+                        break;
+
                     default:
                         Console.WriteLine("What?");
                         break;
